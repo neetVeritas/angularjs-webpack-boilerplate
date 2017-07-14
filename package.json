@@ -1,0 +1,38 @@
+{
+  "name": "angularjs-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple boilerplate for angular.js 1.5 and 1.6 using components and webpack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neetVeritas/angularjs-webpack-boilerplate.git"
+  },
+  "keywords": [
+    "angularjs",
+    "javascript",
+    "app",
+    "webpack",
+    "sass",
+    "scss",
+    "boilerplate"
+  ],
+  "author": "John Nolette",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neetVeritas/angularjs-webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/neetVeritas/angularjs-webpack-boilerplate#readme",
+  "devDependencies": {
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.5",
+    "animate.css": "^3.5.2",
+    "font-awesome": "^4.7.0",
+    "skeleton-css": "^2.0.4"
+  }
+}
