@@ -4,7 +4,10 @@
   "description": "Simple boilerplate for angular.js 1.6 using components, firebase, and webpack.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "node_modules/.bin/eslint src/**.js",
+    "test": "npm run lint",
+    "app:dev": "node_modules/.bin/webpack-dev-server --config build/webpack.conf.js --port 3000",
+    "app": "npm run app"
   },
   "repository": {
     "type": "git",
