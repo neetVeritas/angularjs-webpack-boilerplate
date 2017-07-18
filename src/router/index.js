@@ -1,51 +1,17 @@
+import Home from '@/components/router/view/home'
+import SignIn from '@/components/router/view/signin'
+import SignUp from '@/components/router/view/signup'
+import View from '@/components/router/view/view'
+import Create from '@/components/router/view/create'
+import About from '@/components/router/view/about'
+
 export default function($stateProvider) {
 
-  const home = {
-    name: 'home',
-    url: '/',
-    template: require('angularjs-template-loader!@/router/views/home')
-  }
-
-  $stateProvider.state(home)
-
-  const signin = {
-    name: 'signin',
-    url: '/signin',
-    template: require('angularjs-template-loader!@/router/views/signin')
-  }
-
-  $stateProvider.state(signin)
-
-  const signup = {
-    name: 'signup',
-    url: '/signup',
-    template: require('angularjs-template-loader!@/router/views/signup')
-  }
-
-  $stateProvider.state(signup)
-
-  const view = {
-    name: 'view/:id',
-    url: '/view',
-    template: require('angularjs-template-loader!@/router/views/view')
-  }
-
-  $stateProvider.state(view)
-
-  const create = {
-    name: 'create',
-    url: '/create',
-    template: require('angularjs-template-loader!@/router/views/create')
-  }
-
-  $stateProvider.state(create)
-
-  const about = {
-    name: 'about',
-    url: '/about',
-    template: require('angularjs-template-loader!@/router/views/about')
-  }
-
-  $stateProvider.state(about)
+  $stateProvider.state(Home)
+  $stateProvider.state(SignIn)
+  $stateProvider.state(SignUp)
+  $stateProvider.state(View)
+  $stateProvider.state(Create)
+  $stateProvider.state(About)
 
 }
