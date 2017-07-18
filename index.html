@@ -2,7 +2,18 @@
 <html>
   <head>
     <title>ToDo App</title>
+    <script type="text/javascript" src="dist/dist.js"></script>
+    <link rel="stylesheet" href="dist/dist.css">
   </head>
-  <body>
+  <body ng-app="bp">
+    <header></header>
+    <div class="wrapper">
+      <!-- container with flex -->
+      <div class="container is-flex">
+        <!-- angular-ui-router entry point -->
+        <section ui-view></section>
+      </div>
+      <footer></footer>
+    </div>
   </body>
 </html>

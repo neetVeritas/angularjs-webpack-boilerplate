@@ -8,7 +8,7 @@ import taskMaker from '/@components/task-editor'
 import taskTile from '/@components/task-editor'
 import taskView from '/@components/task-editor'
 
-const App = angular.module('', ['ui.router'])
+const App = angular.module('bp', ['ui.router'])
 
 App.component(taskEditor) // # install components
 App.component(taskMaker)
