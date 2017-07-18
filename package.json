@@ -53,11 +53,13 @@
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.0",
     "url-loader": "^0.5.9",
+    "webpack": "^2.2.0",
     "webpack-dev-middleware": "^1.10.2",
     "webpack-hot-middleware": "^2.18.0"
   },
   "dependencies": {
     "angular": "^1.6.5",
+    "angular-ui-router": "^1.0.3",
     "angularfire": "^2.3.0",
     "animate.css": "^3.5.2",
     "font-awesome": "^4.7.0",
