@@ -5,7 +5,7 @@ import View from '@/components/router/view/view'
 import Create from '@/components/router/view/create'
 import About from '@/components/router/view/about'
 
-export default function($stateProvider) {
+export const router = function($stateProvider) {
 
   $stateProvider.state(Home)
   $stateProvider.state(SignIn)
