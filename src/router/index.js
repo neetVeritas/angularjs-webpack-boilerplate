@@ -1,9 +1,9 @@
-import Home from '@/components/router/view/home'
-import SignIn from '@/components/router/view/signin'
-import SignUp from '@/components/router/view/signup'
-import View from '@/components/router/view/view'
-import Create from '@/components/router/view/create'
-import About from '@/components/router/view/about'
+import Home from '@/router/views/home'
+import SignIn from '@/router/views/signin'
+import SignUp from '@/router/views/signup'
+import View from '@/router/views/view'
+import Create from '@/router/views/create'
+import About from '@/router/views/about'
 
 export const router = function($stateProvider) {
 

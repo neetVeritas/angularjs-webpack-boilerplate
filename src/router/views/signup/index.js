@@ -3,5 +3,5 @@ export default {
   url: '/signup',
   controllerAs: 'signupCtrl',
   controller: require('@/router/views/signup/controller.js'),
-  template: require('angularjs-template-loader!@/router/views/signupabout/view.html')
+  template: require('angularjs-template-loader!@/router/views/signup/view.html')
 }
