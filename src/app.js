@@ -1,7 +1,7 @@
 import angular from 'angular'
 import 'angular-ui-router'
 
-import { router } from '@/router'
+import router from '@/router'
 
 import Header from '@/components/header'
 import Footer from '@/components/footer'
@@ -20,4 +20,3 @@ App.component(TaskTile)
 App.component(TaskView)
 
 App.config(router)  // # init router
-
