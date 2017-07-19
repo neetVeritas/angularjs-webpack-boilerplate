@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+@import 'mixins/card.scss';
+@import 'mixins/media-queries.scss';
+@import 'mixins/push-auto.scss';
+@import 'mixins/responsive-ratio.scss';
+
+@import 'partials/icons.scss';
+
+@import 'components/header.scss';
+@import 'components/footer.scss';
+
+* {
+  font-family: $font-general;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+}
+
+body {
+  background-color: $color-shade-lighter;
+}
+
+.is-flex {
+  flex-direction: column;
+}
+
+.wrapper {
+  background-color: $color-shade-light;
+  @include card(1);
+
+  section[ui-view] {
+    flex: 1;
+  }
+}
