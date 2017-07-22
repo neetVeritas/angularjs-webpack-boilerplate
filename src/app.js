@@ -20,4 +20,3 @@ App.component('task-tile', TaskTile)
 App.component('task-view', TaskView)
 
 App.config(router)  // # init router
-
