@@ -5,7 +5,7 @@ import View from '@/router/views/view'
 import Create from '@/router/views/create'
 import About from '@/router/views/about'
 
-export const router = function($stateProvider) {
+export default ['$stateProvider', function($stateProvider) {
 
   $stateProvider.state(Home)
   $stateProvider.state(SignIn)
@@ -14,4 +14,4 @@ export const router = function($stateProvider) {
   $stateProvider.state(Create)
   $stateProvider.state(About)
 
-}
+}]
