@@ -5,7 +5,9 @@ import View from '@/router/views/view'
 import Create from '@/router/views/create'
 import About from '@/router/views/about'
 
-export default ['$stateProvider', function($stateProvider) {
+export default ['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+
+  $urlRouterProvider.otherwise('/')
 
   $stateProvider.state(Home)
   $stateProvider.state(SignIn)

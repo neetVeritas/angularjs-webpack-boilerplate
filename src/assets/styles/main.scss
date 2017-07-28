@@ -22,15 +22,18 @@ body {
   background-color: $color-shade-lighter;
 }
 
+body, .wrapper {
+  height: 100%;
+}
+
 .is-flex {
   flex-direction: column;
 }
 
 .wrapper {
   background-color: $color-shade-light;
-  @include card(1);
-
   section[ui-view] {
     flex: 1;
+    margin-top: 15rem;
   }
 }
