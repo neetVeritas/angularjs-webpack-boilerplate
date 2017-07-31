@@ -5,15 +5,20 @@ import View from '@/router/views/view'
 import Create from '@/router/views/create'
 import About from '@/router/views/about'
 
-export default ['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+export default ['$authService', '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
-  $urlRouterProvider.otherwise('/')
-
-  $stateProvider.state(Home)
-  $stateProvider.state(SignIn)
-  $stateProvider.state(SignUp)
-  $stateProvider.state(View)
-  $stateProvider.state(Create)
-  $stateProvider.state(About)
+  if ($authService.loggedIn()) {
+    $stateProvider.state(SignIn)
+    $stateProvider.state(SignUp)
+    $urlRouterProvider.otherwise('/signIn')
+  } else {
+    $stateProvider.state(Home)
+    $stateProvider.state(SignIn)
+    $stateProvider.state(SignUp)
+    $stateProvider.state(View)
+    $stateProvider.state(Create)
+    $stateProvider.state(About)
+    $urlRouterProvider.otherwise('/')
+  }
 
 }]

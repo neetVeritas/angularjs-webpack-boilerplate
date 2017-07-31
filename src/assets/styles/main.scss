@@ -22,18 +22,19 @@ body {
   background-color: $color-shade-lighter;
 }
 
-body, .wrapper {
-  height: 100%;
+body {
+  min-height: 100vh;
+  & > .wrapper {
+    min-height: 100vh;
+  }
 }
 
 .is-flex {
+  display: flex;
   flex-direction: column;
 }
 
-.wrapper {
-  background-color: $color-shade-light;
-  section[ui-view] {
-    flex: 1;
-    margin-top: 15rem;
-  }
+section[ui-view] {
+  flex: 1;
+  margin-top: 15rem;
 }
