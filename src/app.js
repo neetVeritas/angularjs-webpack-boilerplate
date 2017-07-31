@@ -2,7 +2,13 @@ import angular from 'angular'
 import 'angular-ui-router'
 import 'angularfire'
 
-const App = angular.module('bp', ['ui.router'])
+const App = angular.module('bp', ['ui.router', 'firebase'])
+
+import config from '@/config.json'
+
+  App.run(function() {
+    // # left here
+  })
 
 import authService from '@/services/auth'
 
