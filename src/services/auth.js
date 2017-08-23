@@ -1,4 +1,4 @@
-export default ['$window', '$firebaseAuth', function($window, $firebaseAuth) {
+export default ['$window', '$firebaseAuth', function ($window, $firebaseAuth) {
   let auth = $firebaseAuth()
   return {
     register(user) {

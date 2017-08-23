@@ -1,3 +1,4 @@
+import firebase from 'firebase'
 import angular from 'angular'
 import 'angular-ui-router'
 import 'angularfire'
@@ -6,8 +7,8 @@ const App = angular.module('bp', ['ui.router', 'firebase'])
 
 import config from '@/config.json'
 
-  App.run(function() {
-    // # left here
+  App.config(function() {
+    firebase.initializeApp(config.firebase)
   })
 
 import authService from '@/services/auth'

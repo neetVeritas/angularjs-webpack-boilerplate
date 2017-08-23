@@ -5,7 +5,7 @@ import View from '@/router/views/view'
 import Create from '@/router/views/create'
 import About from '@/router/views/about'
 
-export default ['$authService', '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+export default ['$authService', '$stateProvider', '$urlRouterProvider', function ($authService, $stateProvider, $urlRouterProvider) {
 
   if ($authService.loggedIn()) {
     $stateProvider.state(SignIn)
