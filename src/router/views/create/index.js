@@ -1,7 +1,9 @@
+import controller from '@/router/views/create/controller.js'
+
 export default {
   name: 'create',
   url: '/create',
   controllerAs: 'createCtrl',
-  controller: require('@/router/views/create/controller.js'),
+  controller,
   template: require('angularjs-template-loader!@/router/views/create/view.html')
 }

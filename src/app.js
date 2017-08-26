@@ -7,11 +7,11 @@ const App = angular.module('bp', ['ui.router', 'firebase'])
 
 import config from '@/config.json'
 
-  App.config(function() {
+  App.run(function() {
     firebase.initializeApp(config.firebase)
   })
 
-import authService from '@/services/auth'
+import authService from '@/providers/auth'
 
   App.factory('$authService', authService)
 
