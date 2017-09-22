@@ -1,7 +1,7 @@
 import controller from '@/router/views/about/controller.js'
 
 export default {
-  name: 'about',
+  name: 'protected_about',
   url: '/about',
   controllerAs: 'aboutCtrl',
   controller,

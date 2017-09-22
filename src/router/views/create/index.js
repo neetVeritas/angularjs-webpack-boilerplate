@@ -1,7 +1,7 @@
 import controller from '@/router/views/create/controller.js'
 
 export default {
-  name: 'create',
+  name: 'protected_create',
   url: '/create',
   controllerAs: 'createCtrl',
   controller,

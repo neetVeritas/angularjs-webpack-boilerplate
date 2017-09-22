@@ -2,8 +2,6 @@ import 'angular'
 import 'angular-ui-router'
 import 'angularfire'
 
-const App = angular.module('bp', ['ui.router', 'firebase'])
-
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import TaskEditor from '@/components/task-editor'
@@ -11,33 +9,33 @@ import TaskMaker from '@/components/task-editor'
 import TaskTile from '@/components/task-editor'
 import TaskView from '@/components/task-editor'
 
-  App.component('header', Header)  // # install components
-  App.component('footer', Footer)
-  App.component('task-editor', TaskEditor)
-  App.component('task-maker', TaskMaker)
-  App.component('task-tile', TaskTile)
-  App.component('task-view', TaskView)
-
 import config from '@/config.json'
-
-  App.config(function() {
-    firebase.initializeApp(config.firebase) // authorize firebase
-  })
-
 import router from '@/router'
-
-  App.config(router)  // # init router
-
 import authService from '@/providers/auth'
 
-  App.factory('$authService', authService)
+const App = angular.module('bp', ['ui.router', 'firebase'])
+
+App.component('header', Header)  // # install components
+App.component('footer', Footer)
+App.component('task-editor', TaskEditor)
+App.component('task-maker', TaskMaker)
+App.component('task-tile', TaskTile)
+App.component('task-view', TaskView)
+
+App.config(function() {
+  firebase.initializeApp(config.firebase)
+})  // # authorize firebase
+
+App.config(router)  // # init router
+
+App.factory('$authService', authService)  // # inject authentication service
 
 App.run(['$rootScope', '$state', '$transitions', '$authService', function ($rootScope, $state, $transitions, $authService) {
-  $transitions.onStart({}, function(trans) {
-    console.log(trans)
-    // var auth = trans.injector().get('$authService')
-    // if (!auth.isLoggedIn()) {
-    //   return trans.router.stateService.target('login')
-    // }
+  $transitions.onBefore({ to: 'protected_**' }, function(trans) {
+    console.log('nigga')
+    var auth = trans.injector().get('$authService')
+    if (!auth.isLoggedIn()) {
+      return $state.target('signup')
+    }
   })
 }])

@@ -1,5 +1,5 @@
 export default {
-  name: 'view',
+  name: 'protected_view',
   url: '/view:taskid',
   controllerAs: 'viewCtrl',
   controller: require('@/router/views/view/controller.js'),

@@ -1,7 +1,7 @@
 import controller from '@/router/views/home/controller.js'
 
 export default {
-  name: 'home',
+  name: 'protected_home',
   url: '/',
   controllerAs: 'homeCtrl',
   controller,
