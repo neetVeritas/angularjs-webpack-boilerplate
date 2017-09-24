@@ -31,8 +31,7 @@ App.config(router)  // # init router
 App.factory('$authService', authService)  // # inject authentication service
 
 App.run(['$rootScope', '$state', '$transitions', '$authService', function ($rootScope, $state, $transitions, $authService) {
-  $transitions.onBefore({ to: 'protected_**' }, function(trans) {
-    console.log('nigga')
+  $transitions.onBefore({ to: (state) => { return state.requiresAuth } }, function(trans) {
     var auth = trans.injector().get('$authService')
     if (!auth.isLoggedIn()) {
       return $state.target('signup')

@@ -1,8 +1,9 @@
 import controller from '@/router/views/create/controller.js'
 
 export default {
-  name: 'protected_create',
+  name: 'create',
   url: '/create',
+  requiresAuth: true,
   controllerAs: 'createCtrl',
   controller,
   template: require('angularjs-template-loader!@/router/views/create/view.html')
