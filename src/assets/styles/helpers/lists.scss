@@ -2,7 +2,7 @@ ul, ol {
   &.unstyled {
     list-style: none;
   }
-  &.inline {
+  &.inline > li {
     display: inline;
   }
 }
