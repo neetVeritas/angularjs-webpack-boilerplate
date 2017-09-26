@@ -17,6 +17,13 @@
   color: $color-ghost-white;
 }
 
+select, input, textarea {
+  color: $color-gray-darkest;
+  & * {
+    color: $color-gray-darkest;
+  }
+}
+
 li {
   margin: 0;
 }
