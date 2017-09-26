@@ -1,13 +1,12 @@
 footer {
   display: block;
-  background-color: $color-shade-darkest;
-  color: $color-ghost-white;
+  background-color: $color-gray-darkest;
   padding-top: 1.5rem;
   text-align: center;
 
   & a.author {
     text-decoration: none;
     font-weight: bold;
-    color: $color-shade-dark;
+    color: $color-shade-medium;
   }
 }
