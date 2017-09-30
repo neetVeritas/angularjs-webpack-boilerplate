@@ -1,8 +1,8 @@
 input, textarea, select {
   @include card(1);
-  padding: 1rem 0.5rem;
   border-radius: 0;
   border: 0.1rem solid $color-ghost-white;
+  padding: 1rem 0.5rem;
   background-color: $color-ghost-white;
   &:focus {
     @include card(3);
