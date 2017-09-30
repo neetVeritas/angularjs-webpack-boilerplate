@@ -1,0 +1,12 @@
+input, textarea, select {
+  @include card(1);
+  padding: 1rem 0.5rem;
+  border-radius: 0;
+  border: 0.1rem solid $color-ghost-white;
+  background-color: $color-ghost-white;
+  &:focus {
+    @include card(3);
+    transition: border .7s ease-in-out;
+    border: 0.1rem solid $color-gray-lightest;
+  }
+}
