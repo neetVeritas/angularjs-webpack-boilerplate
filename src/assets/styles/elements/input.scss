@@ -2,7 +2,7 @@ input[type], textarea, select {
   @include card(1);
   border-radius: 1px;
   border: 0.1rem solid $color-ghost-white;
-  padding: 1.5rem 0.5rem;
+  padding: 1rem 0.5rem;
   background-color: $color-ghost-white;
   &:focus {
     @include card(3);

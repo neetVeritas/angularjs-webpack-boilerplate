@@ -1,0 +1,22 @@
+button {
+  @include card(1);
+  border-radius: 1px;
+  padding: 0.5rem 0.5rem;
+  color: $color-ghost-white;
+  background-color: $color-primary;
+  &.is-danger {
+    background-color: $color-danger;
+  }
+  &.is-warning {
+    background-color: $color-warning;
+  }
+  &.is-info {
+    background-color: $color-info;
+  }
+  &.is-success {
+    background-color: $color-success;
+  }
+  &:focus {
+    @include card(3);
+  }
+}
