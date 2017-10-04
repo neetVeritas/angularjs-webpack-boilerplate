@@ -1,7 +1,7 @@
 button {
   @include card(1);
   border-radius: 1px;
-  padding: 0.5rem 0.5rem;
+  padding: 0rem 3rem;
   color: $color-ghost-white;
   background-color: $color-primary;
   &.is-danger {
