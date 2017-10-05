@@ -7,6 +7,6 @@ cache:
 install:
   - "npm install"
 script:
-  - "wget -O $CONFIG_HREF src/config.json"
+  - "wget -O src/config.json $CONFIG_HREF"
   - "npm run test"
   - "npm run build"
