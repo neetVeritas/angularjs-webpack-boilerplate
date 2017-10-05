@@ -1,6 +1,7 @@
 button {
   @include card(1);
   border-radius: 1px;
+  border: none;
   padding: 0rem 3rem;
   color: $color-ghost-white;
   background-color: $color-primary;
@@ -16,7 +17,9 @@ button {
   &.is-success {
     background-color: $color-success;
   }
+  &:focus, &:hover {
+    color: $color-ghost-white;
+  }
   &:focus {
-    @include card(3);
   }
 }

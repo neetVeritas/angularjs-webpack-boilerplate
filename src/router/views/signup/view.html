@@ -4,7 +4,9 @@
     <form>
       <div class="row">
         <div class="six columns">
-          <label for="emailInput">Email</label>
+          <label for="emailInput">
+            <i class="ico ico-left fa fa-envelope"></i> Email
+          </label>
           <input
             id="emailInput"
             class="u-full-width"
@@ -12,11 +14,17 @@
             ng-model="email">
         </div>
         <div class="six columns">
-          <label for="passwordInput">Password</label>
+          <label for="passwordInput">
+            <i
+              class="ico ico-left fa"
+              ng-class="passwordVisible ? 'fa-eye' : 'fa-eye-slash'"
+              ng-click="passwordVisible = !passwordVisible"
+              title="Show or Hide Password"></i> Password
+          </label>
           <input
             id="passwordInput"
             class="u-full-width"
-            type="password"
+            type="{{ passwordVisible ? 'text' : 'password' }}"
             ng-model="password">
         </div>
       </div>
@@ -40,13 +48,12 @@
       </div>
       <br />
       <div class="row">
-        <button
-          class="is-success"
-          type="submit"
-          ng-click="ctrl.signup()">Signup</button>
-        <button
-          class="is-warning"
-          ng-click="ctrl.login()">Login</button>
+        <button class="is-success" type="submit" ng-click="ctrl.signup()">
+          <i class="ico ico-left fa fa-arrow-circle-up"></i> iSignup
+        </button>
+        <button class="is-warning" ng-click="ctrl.login()">
+          <i class="ico ico-left fa fa-external-link"></i> Login
+        </button>
       </div>
     </form>
   </div>
