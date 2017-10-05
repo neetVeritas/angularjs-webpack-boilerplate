@@ -1,7 +1,7 @@
 <div class="row animated fadeIn">
   <div class="seven columns">
     <h1>SignUp</h1>
-    <form>
+    <form ng-submit="signupCtrl.signup()">
       <div class="row">
         <div class="six columns">
           <label for="emailInput">
@@ -48,8 +48,8 @@
       </div>
       <br />
       <div class="row">
-        <button class="is-success" type="submit" ng-click="ctrl.signup()">
-          <i class="ico ico-left fa fa-arrow-circle-up"></i> iSignup
+        <button class="is-success" type="submit">
+          <i class="ico ico-left fa fa-arrow-circle-up"></i> Signup
         </button>
         <button class="is-warning" ng-click="ctrl.login()">
           <i class="ico ico-left fa fa-external-link"></i> Login
