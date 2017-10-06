@@ -9,19 +9,9 @@
   </div>
   <div id="social-links" class="three columns">
     <ul class="inline unstyled">
-      <li>
-        <a href="https://twitter.com/neet_jn">
-          <i id="twitter" class="ico ico-left fa fa-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a href="http://github.com/neetjn">
-          <i id="github" class="ico ico-left fa fa-github"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/john-nolette-69ba72132">
-          <i id="linkedin" class="ico ico-left fa fa-linkedin"></i>
+      <li ng-repeat="link in socialLinks">
+        <a ng-href="link.href" class="animate">
+          <i id="{{link.name}}" class="ico ico-left fa fa-{{link.name}}"></i>
         </a>
       </li>
     </ul>

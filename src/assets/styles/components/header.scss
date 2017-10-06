@@ -26,6 +26,10 @@ header {
       text-decoration: none;
     }
 
+    a:hover {
+      @extend .jbounce;
+    }
+
     & #twitter {
       color: $color-social-twitter;
     }
